@@ -19,8 +19,14 @@
     "format": "prettier --write .",
     "lint:fix": "yarn run lint --fix",
     "beforePR": "yarn lint:fix && yarn format",
-    "allTestsChrome": "cypress run --browser chrome",
-    "allTestsChromeHeaded": "cypress open --browser chrome"
+    "chrome:headless": "cypress run --browser chrome",
+    "chrome:headed": "cypress run --browser chrome --headed",
+    "edge:headless": "cypress run --browser edge",
+    "edge:headed": "cypress run --browser edge --headed",
+    "electron:headless": "cypress run",
+    "electron:headed": "cypress run --headed",
+    "firefox:headless": "cypress run --browser firefox",
+    "firefox:headed": "cypress run --browser firefox --headed"
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^18.0.5",

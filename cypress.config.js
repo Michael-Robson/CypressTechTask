@@ -45,7 +45,6 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
   },
   e2e: {
-    baseUrl: 'https://cms.demo.katalon.com/',
     specPattern: '**/*.feature',
     setupNodeEvents,
   },

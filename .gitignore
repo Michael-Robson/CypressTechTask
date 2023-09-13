@@ -4,6 +4,7 @@ node_modules/
 # Cypress test reports
 cypress/reports/*
 cypress/downloads*
+cucumber-messages.ndjson
 
 # Cypress videos
 cypress/videos/*
