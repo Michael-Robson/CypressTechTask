@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:cypress/recommended", // This extends Cypress recommended rules
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "cypress" // Include the Cypress ESLint plugin
+  ],
+  "rules": {
+    // This allows me to use cy.wait - only using it here as an example
+    "cypress/no-unnecessary-waiting": "off"
+  }
+}

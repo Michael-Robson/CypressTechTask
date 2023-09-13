@@ -1,0 +1,43 @@
+{
+  "name": "CypressTask",
+  "version": "1.0.0",
+  "description": "This project is used to solve the Cypress task challenge",
+  "main": "index.js",
+  "repository": "https://github.com/Michael-Robson/CypressTechTask.git",
+  "author": "Michael Robson <ajrobson1985@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "yarn lint:fix",
+    "*.{js,jsx,ts,tsx,scss,css,json,md}": "yarn format"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "cypress:open": "cypress open",
+    "lint": "eslint ./cypress --ext .js",
+    "prettier:check": "prettier --check .",
+    "format": "prettier --write .",
+    "lint:fix": "yarn run lint --fix",
+    "beforePR": "yarn lint:fix && yarn format",
+    "allTestsChrome": "cypress run --browser chrome",
+    "allTestsChromeHeaded": "cypress open --browser chrome"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.5",
+    "@cypress/webpack-preprocessor": "^6.0.0",
+    "cypress": "^12.17.4",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.14.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.2",
+    "webpack": "^5.88.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "html": {
+      "enabled": true
+    }
+  }
+}
